@@ -3,7 +3,7 @@ using System.Drawing;
 using GTA;
 using GTA.Math;
 using GTA.Native;
-using NativeUI;
+using NativeUICommunityRaces;
 using Font = GTA.Font;
 
 namespace CommunityRaces

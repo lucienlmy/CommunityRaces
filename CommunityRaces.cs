@@ -10,7 +10,7 @@ using GTA.Math;
 using GTA.Native;
 using MapEditor;
 using MapEditor.API;
-using NativeUI;
+using NativeUICommunityRaces;
 using Newtonsoft.Json;
 using Font = GTA.Font;
 

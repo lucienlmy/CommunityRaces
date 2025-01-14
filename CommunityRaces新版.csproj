@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+	<PropertyGroup>
+		<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+		<UseWindowsForms>True</UseWindowsForms>
+		<TargetFramework>net481</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup>
+		<LangVersion>11.0</LangVersion>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	</PropertyGroup>
+	<PropertyGroup>
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="xcopy /y &quot;$(TargetDir)$(TargetName).dll&quot; &quot;D:\Games\GTAV\scripts\1ScriptsText&quot;" />
+	</Target>
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Map Editor 2.17\MapEditor.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="NativeUICommunityRaces">
+	    <HintPath>..\..\1 Support\NativeUICommunityRaces.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Newtonsoft.Json">
+	    <HintPath>..\..\1 Support\Newtonsoft.Json.dll</HintPath>
+	  </Reference>
+	  <Reference Include="ScriptHookVDotNet2">
+	    <HintPath>..\..\1 Support\ScriptHookVDotNet2.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+</Project>
